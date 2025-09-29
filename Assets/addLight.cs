@@ -7,7 +7,11 @@ public class addLight : MonoBehaviour
     public Light luz;
 
     // Variables públicas para controlar la luz
-    public float intensidad = 2f;
+    public float intensidad = 5f;
+    public float intensidadFinal = 0f;
+    public float delay = 10f;
+    public float temporitzador;
+
     public Color colorLuz = Color.red;
     public LightType tipoLuz = LightType.Point;
 
@@ -33,6 +37,15 @@ public class addLight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        temporitzador += Time.deltaTime;
 
+        // Fer la disminució despres dels primers 10 segons
+        if(temporitzador >= delay)
+        {
+            luz.intensity = intensidadFinal;
+            
+            // Desactivar el script després de executar aquesta linea
+            enabled = false;
+        }
     }
 }
