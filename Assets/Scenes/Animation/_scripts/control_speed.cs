@@ -17,8 +17,6 @@ public class control_speed : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            animator.ResetTrigger("pressed_DownArrow");
-            animator.SetTrigger("pressed_UpArrow");
             
             Speed += 0.0025f;
 
@@ -28,8 +26,6 @@ public class control_speed : MonoBehaviour
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            animator.ResetTrigger("pressed_UpArrow");
-            animator.SetTrigger("pressed_DownArrow");
 
             Speed -= 0.0025f;
 
