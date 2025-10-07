@@ -13,15 +13,17 @@ public class change_animation : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.S))
         {
-           // m_Animator.ResetTrigger("pressed_C");
+            // m_Animator.ResetTrigger("pressed_C");
 
+            m_Animator.ResetTrigger("pressed_M");
             m_Animator.SetTrigger("pressed_S");
         }
 
         if (Input.GetKey(KeyCode.C))
         {
-           // m_Animator.ResetTrigger("pressed_S");
-
+            // m_Animator.ResetTrigger("pressed_S");
+            
+            m_Animator.ResetTrigger("pressed_S");
             m_Animator.SetTrigger("pressed_C");
         }
     }
