@@ -20,7 +20,7 @@ public class control_speed : MonoBehaviour
             animator.ResetTrigger("pressed_DownArrow");
             animator.SetTrigger("pressed_UpArrow");
             
-            Speed += 0.05f;
+            Speed += 0.0025f;
 
             animator.SetFloat("Speed", Speed);
 
@@ -31,7 +31,7 @@ public class control_speed : MonoBehaviour
             animator.ResetTrigger("pressed_UpArrow");
             animator.SetTrigger("pressed_DownArrow");
 
-            Speed -= 0.05f;
+            Speed -= 0.0025f;
 
             if (Speed < 0)
             {
